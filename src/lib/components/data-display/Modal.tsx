@@ -24,11 +24,11 @@ const StyledModal = styled.div<ModalProps>`
   top: 0;
   width: 500px;
   height: 300px;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 1rem;
-  box-shadow: 1px 2px 10px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.2);
   z-index: 2000;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(30px);
   transition: transform 0.2s ease-in-out;
   &.visible {

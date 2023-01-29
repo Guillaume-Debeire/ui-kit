@@ -2,11 +2,20 @@ import styled from "styled-components";
 
 export interface ButtonProps {
   label?: string;
-  buttonType?: "primary" | "secondary" | "danger" | "modify" | "default";
+  buttonType?: ButtonTypeType;
   placeholder?: string;
-  size?: "small" | "medium" | "large";
+  size?: ButtonSizeType;
   onClick?: () => void;
 }
+
+export type ButtonTypeType =
+  | "primary"
+  | "secondary"
+  | "danger"
+  | "modify"
+  | "default";
+
+export type ButtonSizeType = "small" | "medium" | "large";
 
 export function Button(props: ButtonProps) {
   return (

@@ -48,7 +48,9 @@ export function BurgerMenu(props: BurgerMenuProps) {
                 {!option.subOptions ? (
                   <>
                     {option.to && (
-                      <DirectOption to={option.to}>{option.label}</DirectOption>
+                      <DirectOption to={option.to} key={key}>
+                        {option.label}
+                      </DirectOption>
                     )}
                   </>
                 ) : (
@@ -140,8 +142,9 @@ const Menu = styled.div<BurgerMenuProps>`
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0.7),
-    rgba(255, 255, 255, 0.3),
-    rgba(0, 127, 201, 0.169)
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.6),
+    rgba(228, 245, 255, 0.808)
   );
   backdrop-filter: blur(30px);
   width: ${(props) => (props.width ? `${props.width}px` : "200px")};

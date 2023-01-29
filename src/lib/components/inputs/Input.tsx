@@ -13,9 +13,10 @@ export function Input(props: InputProps) {
     <Wrapper className="input-wrapper">
       {props.label && <Label className="input-label">{props.label}</Label>}
       <StyledInput
-        value={props.inputValue}
+        defaultValue={props.inputValue}
         className="input"
         placeholder={props.placeholder}
+        onChange={props.onChange}
         {...props}
       />
     </Wrapper>

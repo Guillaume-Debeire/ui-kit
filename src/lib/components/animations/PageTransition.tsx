@@ -19,7 +19,6 @@ export function PageTransition(props: PageTransitionProps) {
 }
 
 const AnimatedTransition = styled.div`
-  height: 100%;
   width: 100%;
   transition: all 0.2s ease-in-out;
   &.close {

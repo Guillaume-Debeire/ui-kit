@@ -3,6 +3,7 @@ import { Home } from "../components/Home";
 import { CardExample } from "../examples/data-display/CardExample";
 import { CarouselExample } from "../examples/data-display/CarouselExample";
 import { ModalExample } from "../examples/data-display/ModalExample";
+import { NotificationExample } from "../examples/data-display/NotificationExample";
 import { TitleExample } from "../examples/data-display/TitleExample";
 import { ButtonsExample } from "../examples/inputs/ButtonsExamples";
 import { InputExample } from "../examples/inputs/InputExample";
@@ -21,6 +22,10 @@ export function AppRouter() {
       <Route path="/datadisplay/title" element={<TitleExample />} />
       <Route path="/datadisplay/carousel" element={<CarouselExample />} />
       <Route path="/datadisplay/modal" element={<ModalExample />} />
+      <Route
+        path="/datadisplay/notification"
+        element={<NotificationExample />}
+      />
     </Routes>
   );
 }

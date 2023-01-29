@@ -19,8 +19,11 @@ export function Carousel(props: CarouselProps) {
             <>
               <PageContainer
                 className={`page ${selectedPage === key ? "selected" : ""}`}
+                key={key}
               >
-                <Page className="carousel-page">{page}</Page>
+                <Page className="carousel-page" key={key}>
+                  {page}
+                </Page>
               </PageContainer>
             </>
           ))}
@@ -31,6 +34,7 @@ export function Carousel(props: CarouselProps) {
             <ButtonCarousel
               className={`${selectedPage === key ? "selected" : ""}`}
               onClick={() => setSelectedPage(key)}
+              key={key}
             />
           ))}
       </NavCarousel>
@@ -72,8 +76,7 @@ const PageContainer = styled.div`
   z-index: 100;
   display: flex;
   align-self: center;
-  overflow-y: overlay;
-  overflow-x: visible;
+  overflow: hidden;
   filter: blur(5px);
   &.selected {
     width: 100%;

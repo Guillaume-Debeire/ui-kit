@@ -26,11 +26,6 @@ export function ModalExample() {
                 <Title label="Example Modal" level={3} />
               </>
             </Modal>
-            <Button
-              buttonType="secondary"
-              label="Show Modal"
-              onClick={() => setModalVisibility(!modalVisibility)}
-            />
           </ModalWrapper>
         </>
         <>
